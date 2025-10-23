@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Player - Your Ultimate Streaming Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
+        }
+        .carousel-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .card:hover .play-icon {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        .play-icon {
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(10px) scale(0.9);
+        }
+        .scroll-button {
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                        <a href="index.html" class="text-white hover:text-purple-400 transition-colors duration-300">Home</a>
+                        <a href="movies.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Movies</a>
+                        <a href="shows.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Shows</a>
+                        <a href="short_films.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Short Films</a>
+                        <a href="albums.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Albums</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="search_results.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </a>
+                    <a href="notifications.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </a>
+                    <a href="dashboard.html">
+                        <img class="h-8 w-8 rounded-full object-cover" src="https://placehold.co/100x100/7c3aed/ffffff?text=U" alt="User profile">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-white">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Hero background">
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Infinite Worlds, One Screen.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200 mb-8">Discover thousands of movies, series, short films, and music albums. Your next favorite is just a click away.</p>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="player.html" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 flex items-center space-x-2">
+                        <i data-lucide="play" class="w-5 h-5"></i>
+                        <span>Play Now</span>
+                    </a>
+                    <a href="content_details.html" class="bg-gray-700 bg-opacity-50 hover:bg-opacity-75 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 flex items-center space-x-2">
+                         <i data-lucide="info" class="w-5 h-5"></i>
+                        <span>More Info</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="py-12 px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <div class="content-section" data-section-id="movies">
+                <h2 class="text-2xl font-bold mb-4">Trending Movies</h2>
+                <div class="relative">
+                    <div class="carousel-container overflow-x-auto flex space-x-4 pb-4">
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/1e293b/ffffff?text=Cosmic+Odyssey" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Cosmic Odyssey</h3>
+                                <p class="text-sm text-gray-400">Sci-Fi, Adventure</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/4a5568/ffffff?text=City+of+Whispers" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">City of Whispers</h3>
+                                <p class="text-sm text-gray-400">Thriller, Mystery</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/718096/ffffff?text=Echoes+of+Time" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Echoes of Time</h3>
+                                <p class="text-sm text-gray-400">Drama, Romance</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/a0aec0/1a202c?text=The+Last+Stand" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">The Last Stand</h3>
+                                <p class="text-sm text-gray-400">Action, War</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/cbd5e0/1a202c?text=Neon+Dreams" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Neon Dreams</h3>
+                                <p class="text-sm text-gray-400">Cyberpunk, Thriller</p>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="scroll-button scroll-left absolute top-1/2 -translate-y-1/2 left-0 bg-gray-800 bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full hidden md:block transition-all duration-300 -ml-4"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                    <button class="scroll-button scroll-right absolute top-1/2 -translate-y-1/2 right-0 bg-gray-800 bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full hidden md:block transition-all duration-300 -mr-4"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+
+            <div class="content-section" data-section-id="shows">
+                <h2 class="text-2xl font-bold mb-4">Binge-worthy Shows</h2>
+                <div class="relative">
+                    <div class="carousel-container overflow-x-auto flex space-x-4 pb-4">
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                             <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/2d3748/ffffff?text=The+Crown's+Game" alt="Show Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">The Crown's Game</h3>
+                                <p class="text-sm text-gray-400">Fantasy, Drama</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                             <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/4a5568/ffffff?text=Silicon+Valley+2.0" alt="Show Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Silicon Valley 2.0</h3>
+                                <p class="text-sm text-gray-400">Comedy</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                             <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/1a202c/ffffff?text=Mind+Hunters" alt="Show Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Mind Hunters</h3>
+                                <p class="text-sm text-gray-400">Crime, Thriller</p>
+                            </div>
+                        </a>
+                         <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                             <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/718096/ffffff?text=Future+Perfect" alt="Show Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Future Perfect</h3>
+                                <p class="text-sm text-gray-400">Sci-Fi</p>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="scroll-button scroll-left absolute top-1/2 -translate-y-1/2 left-0 bg-gray-800 bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full hidden md:block transition-all duration-300 -ml-4"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                    <button class="scroll-button scroll-right absolute top-1/2 -translate-y-1/2 right-0 bg-gray-800 bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full hidden md:block transition-all duration-300 -mr-4"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+            
+            <div class="content-section" data-section-id="short-films">
+                <h2 class="text-2xl font-bold mb-4">Critically Acclaimed Shorts</h2>
+                <div class="relative">
+                    <div class="carousel-container overflow-x-auto flex space-x-4 pb-4">
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/9f7aea/ffffff?text=The+Last+Leaf" alt="Short Film Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                             <div class="mt-3">
+                                <h3 class="font-semibold text-lg">The Last Leaf</h3>
+                                <p class="text-sm text-gray-400">Drama, 15 min</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/ed64a6/ffffff?text=Loop" alt="Short Film Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                             <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Loop</h3>
+                                <p class="text-sm text-gray-400">Animation, 10 min</p>
+                            </div>
+                        </a>
+                        <a href="content_details.html" class="card flex-shrink-0 w-60 md:w-72 group">
+                            <div class="relative rounded-lg overflow-hidden shadow-xl">
+                                <img src="https://placehold.co/400x600/f56565/ffffff?text=Sundown" alt="Short Film Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                                    <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-4">
+                                        <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                    </button>
+                                </div>
+                            </div>
+                             <div class="mt-3">
+                                <h3 class="font-semibold text-lg">Sundown</h3>
+                                <p class="text-sm text-gray-400">Thriller, 20 min</p>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="scroll-button scroll-left absolute top-1/2 -translate-y-1/2 left-0 bg-gray-800 bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full hidden md:block transition-all duration-300 -ml-4"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                    <button class="scroll-button scroll-right absolute top-1/2 -translate-y-1/2 right-0 bg-gray-800 bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full hidden md:block transition-all duration-300 -mr-4"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <a href="index.html" class="text-xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <p class="text-gray-400 text-sm mt-1">&copy; 2025 VibePlayer, Inc. All Rights Reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <a href="terms_of_service.html" class="hover:text-white mx-2">Terms of Service</a>
+                <a href="privacy_policy.html" class="hover:text-white mx-2">Privacy Policy</a>
+                <a href="faq.html" class="hover:text-white mx-2">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            const container = section.querySelector('.carousel-container');
+            const scrollLeftBtn = section.querySelector('.scroll-left');
+            const scrollRightBtn = section.querySelector('.scroll-right');
+            const scrollAmount = 300;
+
+            if (scrollLeftBtn && scrollRightBtn && container) {
+                 scrollLeftBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent the <a> tag from navigating
+                    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+
+                scrollRightBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent the <a> tag from navigating
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

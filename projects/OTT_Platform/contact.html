@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                        <a href="index.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Home</a>
+                        <a href="movies.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Movies</a>
+                        <a href="shows.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Shows</a>
+                        <a href="short_films.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Short Films</a>
+                        <a href="albums.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Albums</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="search_results.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </a>
+                    <a href="notifications.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </a>
+                    <a href="dashboard.html">
+                        <img class="h-8 w-8 rounded-full object-cover" src="https://placehold.co/100x100/7c3aed/ffffff?text=U" alt="User profile">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Get In Touch</h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">We’d love to hear from you. Whether you have a question, feedback, or need assistance, our team is ready to help.</p>
+                </div>
+
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 bg-gray-800 p-8 rounded-2xl">
+                    <div>
+                        <h2 class="text-2xl font-bold">Contact Information</h2>
+                        <p class="mt-2 text-gray-400">Fill up the form and our team will get back to you within 24 hours.</p>
+                        <div class="mt-8 space-y-6">
+                            <div class="flex items-center">
+                                <i data-lucide="phone" class="w-6 h-6 text-purple-400"></i>
+                                <span class="ml-4 text-gray-300">+91 00000 00000</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="mail" class="w-6 h-6 text-purple-400"></i>
+                                <span class="ml-4 text-gray-300">help@vibeplayer.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-purple-400"></i>
+                                <span class="ml-4 text-gray-300">123 Vibe Street, Media City, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="sr-only">Full Name</label>
+                            <input type="text" name="name" id="name" required class="block w-full px-4 py-3 rounded-md bg-gray-900 border-gray-700 text-white focus:ring-purple-500 focus:border-purple-500" placeholder="Full Name">
+                        </div>
+                         <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" required class="block w-full px-4 py-3 rounded-md bg-gray-900 border-gray-700 text-white focus:ring-purple-500 focus:border-purple-500" placeholder="Email Address">
+                        </div>
+                        <div>
+                            <label for="subject" class="sr-only">Subject</label>
+                            <input type="text" name="subject" id="subject" required class="block w-full px-4 py-3 rounded-md bg-gray-900 border-gray-700 text-white focus:ring-purple-500 focus:border-purple-500" placeholder="Subject">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="block w-full px-4 py-3 rounded-md bg-gray-900 border-gray-700 text-white focus:ring-purple-500 focus:border-purple-500" placeholder="Your Message"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-purple-500 transition-colors">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <a href="index.html" class="text-xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <p class="text-gray-400 text-sm mt-1">&copy; 2025 VibePlayer, Inc. All Rights Reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <a href="terms_of_service.html" class="hover:text-white mx-2">Terms of Service</a>
+                <a href="privacy_policy.html" class="hover:text-white mx-2">Privacy Policy</a>
+                <a href="faq.html" class="hover:text-white mx-2">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>

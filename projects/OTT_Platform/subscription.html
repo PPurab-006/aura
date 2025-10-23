@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Subscription - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; -ms-overflow-style: none; scrollbar-width: none; }
+        body::-webkit-scrollbar { display: none; }
+        .main-content::-webkit-scrollbar { display: none; }
+        .main-content { -ms-overflow-style: none; scrollbar-width: none; height: 100vh; overflow-y: scroll; }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+<div class="flex h-screen">
+    <aside class="w-64 bg-gray-900 border-r border-gray-800 flex-shrink-0">
+        <div class="p-6">
+            <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+        </div>
+        <nav class="mt-6 px-4 space-y-2">
+            <a href="dashboard.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i>
+                Dashboard
+            </a>
+            <a href="profile.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="user" class="w-5 h-5 mr-3"></i>
+                Profile
+            </a>
+            <a href="subscription.html" class="flex items-center px-4 py-2.5 text-white bg-purple-600 rounded-lg font-semibold">
+                <i data-lucide="gem" class="w-5 h-5 mr-3"></i>
+                Subscription
+            </a>
+            <a href="billing_history.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="history" class="w-5 h-5 mr-3"></i>
+                Billing History
+            </a>
+            <a href="watchlist.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="list-video" class="w-5 h-5 mr-3"></i>
+                Watchlist
+            </a>
+            <a href="settings.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="settings" class="w-5 h-5 mr-3"></i>
+                Settings
+            </a>
+        </nav>
+        <div class="absolute bottom-0 w-64 p-4">
+            <a href="faq.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="help-circle" class="w-5 h-5 mr-3"></i>
+                Help Center
+            </a>
+            <a href="index.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="log-out" class="w-5 h-5 mr-3"></i>
+                Logout
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-1 bg-gray-900 main-content">
+        <header class="bg-gray-900 border-b border-gray-800 p-6 flex justify-between items-center sticky top-0 z-10">
+            <h1 class="text-3xl font-bold">My Subscription</h1>
+            <a href="profile.html"><img class="h-10 w-10 rounded-full object-cover" src="https://placehold.co/100x100/7c3aed/ffffff?text=U" alt="User profile"></a>
+        </header>
+
+        <div class="p-6">
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="text-xl font-semibold">Standard Plan</h2>
+                            <p class="text-gray-400 mt-1">Next bill on November 1, 2025 for <span class="text-white font-medium">₹799</span>.</p>
+                        </div>
+                        <span class="px-3 py-1 text-sm font-semibold text-green-300 bg-green-800/50 rounded-full">Active</span>
+                    </div>
+
+                    <ul class="mt-6 space-y-3 border-t border-gray-700 pt-6">
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-purple-400 mr-3"></i><span>Watch on 2 screens simultaneously</span></li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-purple-400 mr-3"></i><span>Full HD quality (1080p)</span></li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-purple-400 mr-3"></i><span>Downloads on 2 devices</span></li>
+                    </ul>
+
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 mt-8 border-t border-gray-700 pt-6">
+                        <a href="pricing.html" class="w-full sm:w-auto text-center px-5 py-2.5 text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-md">
+                            Change Plan
+                        </a>
+                        <button type="button" class="w-full sm:w-auto px-5 py-2.5 text-sm font-medium bg-gray-700 hover:bg-gray-600 rounded-md">
+                            Cancel Subscription
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-xl font-semibold mb-4">Payment Method</h2>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x32/ffffff/1a202c?text=VISA" class="h-8 rounded-md" alt="Visa card">
+                            <div class="ml-4">
+                                <p class="font-medium">Visa ending in 1234</p>
+                                <p class="text-sm text-gray-400">Expires 12/2028</p>
+                            </div>
+                        </div>
+                        <button class="text-sm font-semibold text-purple-400 hover:underline">Update</button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-lg">
+                     <div class="flex justify-between items-center">
+                        <h2 class="text-lg font-semibold">Looking for your invoices?</h2>
+                        <a href="billing_history.html" class="flex items-center text-sm font-semibold text-purple-400 hover:underline">
+                            View Billing History <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+</body>
+</html>

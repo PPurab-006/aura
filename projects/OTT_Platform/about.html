@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                        <a href="index.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Home</a>
+                        <a href="movies.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Movies</a>
+                        <a href="shows.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Shows</a>
+                        <a href="short_films.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Short Films</a>
+                        <a href="albums.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Albums</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="search_results.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </a>
+                    <a href="notifications.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </a>
+                    <a href="dashboard.html">
+                        <img class="h-8 w-8 rounded-full object-cover" src="https://placehold.co/100x100/7c3aed/ffffff?text=U" alt="User profile">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <section class="relative bg-gray-800 py-20 sm:py-32">
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://images.unsplash.com/photo-1511875762315-c77351548b84?q=80&w=2070&auto=format&fit=crop" alt="Cinema background" class="w-full h-full object-cover">
+            </div>
+            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">We're Changing Entertainment.</h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">VibePlayer was born from a simple idea: to create a single destination for the world's best stories, accessible to everyone, everywhere.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold text-purple-400">Our Story</h2>
+                        <p class="mt-4 text-gray-400">Founded in 2024, VibePlayer started as a passion project by a small group of film enthusiasts and tech lovers. We were tired of juggling multiple subscriptions and platforms to find the content we loved. We envisioned a unified library of cinematic gems—from blockbuster movies and binge-worthy series to groundbreaking short films and iconic music albums.</p>
+                        <p class="mt-4 text-gray-400">Today, VibePlayer is a fast-growing platform dedicated to curating high-quality content and delivering an unparalleled viewing experience. Our journey is fueled by our love for storytelling and our commitment to our community.</p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1594904532644-8fb8a6312155?q=80&w=1974&auto=format&fit=crop" class="rounded-2xl shadow-xl" alt="Team working">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                     <h2 class="text-3xl font-bold">What Drives Us</h2>
+                     <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">Our values are the foundation of everything we build.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-500 bg-opacity-20 mx-auto mb-4">
+                            <i data-lucide="gem" class="w-8 h-8 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Quality First</h3>
+                        <p class="mt-2 text-gray-400">We prioritize high-fidelity streaming and expertly curated content.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-500 bg-opacity-20 mx-auto mb-4">
+                            <i data-lucide="users" class="w-8 h-8 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Community-Centric</h3>
+                        <p class="mt-2 text-gray-400">Our viewers are at the heart of every decision we make.</p>
+                    </div>
+                    <div class="text-center p-6">
+                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-500 bg-opacity-20 mx-auto mb-4">
+                            <i data-lucide="lightbulb" class="w-8 h-8 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Constant Innovation</h3>
+                        <p class="mt-2 text-gray-400">We are always exploring new ways to enhance your viewing experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <h2 class="text-3xl font-bold">Join the Vibe</h2>
+                 <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">Ready to dive in? Explore our plans and start your free trial today. Adventure awaits.</p>
+                 <a href="pricing.html" class="mt-8 inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                    View Plans
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <a href="index.html" class="text-xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <p class="text-gray-400 text-sm mt-1">&copy; 2025 VibePlayer, Inc. All Rights Reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <a href="terms_of_service.html" class="hover:text-white mx-2">Terms of Service</a>
+                <a href="privacy_policy.html" class="hover:text-white mx-2">Privacy Policy</a>
+                <a href="faq.html" class="hover:text-white mx-2">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>

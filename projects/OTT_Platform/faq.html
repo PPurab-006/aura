@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .accordion-content {
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                        <a href="index.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Home</a>
+                        <a href="movies.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Movies</a>
+                        <a href="shows.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Shows</a>
+                        <a href="short_films.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Short Films</a>
+                        <a href="albums.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Albums</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="search_results.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </a>
+                    <a href="notifications.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </a>
+                    <a href="dashboard.html">
+                        <img class="h-8 w-8 rounded-full object-cover" src="https://placehold.co/100x100/7c3aed/ffffff?text=U" alt="User profile">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Frequently Asked Questions</h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">Have a question? We're here to help. Find the answers to our most common questions below.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-purple-400 mb-4">Subscription & Billing</h2>
+                        <div class="accordion-item bg-gray-800 rounded-lg">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>What payment methods do you accept?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0">
+                                <p class="p-5 pt-0 text-gray-400">We accept all major credit cards (Visa, Mastercard, American Express), as well as PayPal and other digital wallets. All payments are processed securely.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-gray-800 rounded-lg mt-2">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>How do I cancel my subscription?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0">
+                                <p class="p-5 pt-0 text-gray-400">You can cancel your subscription at any time. Simply go to your <a href="subscription.html" class="text-purple-400 underline">Subscription</a> page in your account dashboard and follow the instructions. You will continue to have access until the end of your billing period.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div>
+                        <h2 class="text-2xl font-bold text-purple-400 mb-4 mt-8">Using VibePlayer</h2>
+                        <div class="accordion-item bg-gray-800 rounded-lg">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>How many devices can I watch on?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0">
+                                <p class="p-5 pt-0 text-gray-400">The number of devices you can watch on simultaneously depends on your chosen plan. The Basic plan allows 1 screen, Standard allows 2 screens, and Premium allows up to 4 screens. Check out our <a href="pricing.html" class="text-purple-400 underline">Pricing</a> page for more details.</p>
+                            </div>
+                        </div>
+                         <div class="accordion-item bg-gray-800 rounded-lg mt-2">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-5 font-semibold">
+                                <span>Is content available in 4K?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0">
+                                <p class="p-5 pt-0 text-gray-400">Yes! A growing library of our movies and shows is available in stunning 4K Ultra HD. To watch in 4K, you will need a Premium subscription and a compatible 4K device.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-20 text-center p-8 bg-gray-800 rounded-lg">
+                    <h3 class="text-2xl font-bold">Still have questions?</h3>
+                    <p class="mt-2 text-gray-400">If you can't find the answer you're looking for, please don't hesitate to reach out to our support team.</p>
+                    <a href="contact.html" class="mt-6 inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                        Contact Us
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <a href="index.html" class="text-xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <p class="text-gray-400 text-sm mt-1">&copy; 2025 VibePlayer, Inc. All Rights Reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <a href="terms_of_service.html" class="hover:text-white mx-2">Terms of Service</a>
+                <a href="privacy_policy.html" class="hover:text-white mx-2">Privacy Policy</a>
+                <a href="faq.html" class="hover:text-white mx-2">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        lucide.createIcons();
+
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            const icon = header.querySelector('i');
+
+            header.addEventListener('click', () => {
+                // Toggle content visibility
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

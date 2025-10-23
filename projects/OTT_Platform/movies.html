@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card:hover .play-icon {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        .play-icon {
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(10px) scale(0.9);
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                        <a href="index.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Home</a>
+                        <a href="movies.html" class="text-white hover:text-purple-400 transition-colors duration-300">Movies</a>
+                        <a href="shows.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Shows</a>
+                        <a href="short_films.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Short Films</a>
+                        <a href="albums.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300">Albums</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="search_results.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </a>
+                    <a href="notifications.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </a>
+                    <a href="dashboard.html">
+                        <img class="h-8 w-8 rounded-full object-cover" src="https://placehold.co/100x100/7c3aed/ffffff?text=U" alt="User profile">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <h1 class="text-4xl font-extrabold tracking-tight mb-4 md:mb-0">All Movies</h1>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm font-medium text-gray-400">Genre:</span>
+                    <a href="#" class="px-3 py-1 text-sm bg-gray-800 hover:bg-purple-600 rounded-full transition-colors">Action</a>
+                    <a href="#" class="px-3 py-1 text-sm bg-gray-800 hover:bg-purple-600 rounded-full transition-colors">Comedy</a>
+                    <a href="#" class="px-3 py-1 text-sm bg-gray-800 hover:bg-purple-600 rounded-full transition-colors">Sci-Fi</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <a href="content_details.html" class="card group">
+                    <div class="relative rounded-lg overflow-hidden shadow-xl">
+                        <img src="https://placehold.co/400x600/1e293b/ffffff?text=Cosmic+Odyssey" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3">
+                                <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <h3 class="font-semibold text-md truncate">Cosmic Odyssey</h3>
+                        <p class="text-sm text-gray-400">Sci-Fi, Adventure</p>
+                    </div>
+                </a>
+                
+                <a href="content_details.html" class="card group">
+                    <div class="relative rounded-lg overflow-hidden shadow-xl">
+                        <img src="https://placehold.co/400x600/4a5568/ffffff?text=City+of+Whispers" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3">
+                                <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <h3 class="font-semibold text-md truncate">City of Whispers</h3>
+                        <p class="text-sm text-gray-400">Thriller, Mystery</p>
+                    </div>
+                </a>
+
+                <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/718096/ffffff?text=Echoes+of+Time" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">Echoes of Time</h3><p class="text-sm text-gray-400">Drama</p></div></a>
+                <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/a0aec0/1a202c?text=The+Last+Stand" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">The Last Stand</h3><p class="text-sm text-gray-400">Action</p></div></a>
+                <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/cbd5e0/1a202c?text=Neon+Dreams" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">Neon Dreams</h3><p class="text-sm text-gray-400">Sci-Fi</p></div></a>
+                <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/9f7aea/ffffff?text=The+Heist" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">The Heist</h3><p class="text-sm text-gray-400">Crime</p></div></a>
+                <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/ed64a6/ffffff?text=First+Love" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">First Love</h3><p class="text-sm text-gray-400">Romance</p></div></a>
+                <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/f56565/ffffff?text=Jesters" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">Jesters</h3><p class="text-sm text-gray-400">Comedy</p></div></a>
+                 <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/4fd1c5/1a202c?text=The+Depth" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">The Depth</h3><p class="text-sm text-gray-400">Horror</p></div></a>
+                 <a href="content_details.html" class="card group"><div class="relative rounded-lg overflow-hidden shadow-xl"><img src="https://placehold.co/400x600/f6e05e/1a202c?text=Voyager" alt="Movie Poster" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="play-icon text-white bg-purple-600 bg-opacity-70 rounded-full p-3"><i data-lucide="play" class="w-6 h-6 fill-current"></i></button></div></div><div class="mt-3"><h3 class="font-semibold text-md truncate">Voyager</h3><p class="text-sm text-gray-400">Adventure</p></div></a>
+
+            </div>
+
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-4 py-2 text-gray-400 bg-gray-800 rounded-md hover:bg-purple-600 hover:text-white transition-colors"><i data-lucide="chevron-left" class="w-4 h-4"></i></a>
+                    <a href="#" class="px-4 py-2 text-white bg-purple-600 rounded-md">1</a>
+                    <a href="#" class="px-4 py-2 text-gray-400 bg-gray-800 rounded-md hover:bg-purple-600 hover:text-white transition-colors">2</a>
+                    <a href="#" class="px-4 py-2 text-gray-400 bg-gray-800 rounded-md hover:bg-purple-600 hover:text-white transition-colors">3</a>
+                     <span class="px-4 py-2 text-gray-500">...</span>
+                    <a href="#" class="px-4 py-2 text-gray-400 bg-gray-800 rounded-md hover:bg-purple-600 hover:text-white transition-colors">10</a>
+                    <a href="#" class="px-4 py-2 text-gray-400 bg-gray-800 rounded-md hover:bg-purple-600 hover:text-white transition-colors"><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                </nav>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <a href="index.html" class="text-xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+                    <p class="text-gray-400 text-sm mt-1">&copy; 2025 VibePlayer, Inc. All Rights Reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <a href="terms_of_service.html" class="hover:text-white mx-2">Terms of Service</a>
+                <a href="privacy_policy.html" class="hover:text-white mx-2">Privacy Policy</a>
+                <a href="faq.html" class="hover:text-white mx-2">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>

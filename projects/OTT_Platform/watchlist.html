@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; -ms-overflow-style: none; scrollbar-width: none; }
+        body::-webkit-scrollbar { display: none; }
+        .main-content::-webkit-scrollbar { display: none; }
+        .main-content { -ms-overflow-style: none; scrollbar-width: none; height: 100vh; overflow-y: scroll; }
+        .card:hover .remove-icon { opacity: 1; }
+        .remove-icon { opacity: 0; transition: opacity 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+<div class="flex h-screen">
+    <aside class="w-64 bg-gray-900 border-r border-gray-800 flex-shrink-0">
+        <div class="p-6">
+            <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+        </div>
+        <nav class="mt-6 px-4 space-y-2">
+            <a href="dashboard.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i>
+                Dashboard
+            </a>
+            <a href="profile.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="user" class="w-5 h-5 mr-3"></i>
+                Profile
+            </a>
+            <a href="subscription.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="gem" class="w-5 h-5 mr-3"></i>
+                Subscription
+            </a>
+            <a href="billing_history.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="history" class="w-5 h-5 mr-3"></i>
+                Billing History
+            </a>
+            <a href="watchlist.html" class="flex items-center px-4 py-2.5 text-white bg-purple-600 rounded-lg font-semibold">
+                <i data-lucide="list-video" class="w-5 h-5 mr-3"></i>
+                Watchlist
+            </a>
+            <a href="settings.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="settings" class="w-5 h-5 mr-3"></i>
+                Settings
+            </a>
+        </nav>
+        <div class="absolute bottom-0 w-64 p-4">
+            <a href="faq.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="help-circle" class="w-5 h-5 mr-3"></i>
+                Help Center
+            </a>
+            <a href="index.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="log-out" class="w-5 h-5 mr-3"></i>
+                Logout
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-1 bg-gray-900 main-content">
+        <header class="bg-gray-900 border-b border-gray-800 p-6 flex justify-between items-center sticky top-0 z-10">
+            <h1 class="text-3xl font-bold">My Watchlist</h1>
+            <a href="profile.html"><img class="h-10 w-10 rounded-full object-cover" src="https://placehold.co/100x100/7c3aed/ffffff?text=U" alt="User profile"></a>
+        </header>
+
+        <div class="p-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+                <div class="card group relative">
+                    <a href="content_details.html">
+                        <div class="relative rounded-lg overflow-hidden shadow-xl">
+                            <img src="https://placehold.co/400x600/a0aec0/1a202c?text=The+Last+Stand" alt="Content" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-md truncate">The Last Stand</h3>
+                            <p class="text-sm text-gray-400">Movie</p>
+                        </div>
+                    </a>
+                    <button class="remove-icon absolute top-2 right-2 bg-black/60 p-1.5 rounded-full text-white hover:bg-red-500 transition-colors z-10">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+                <div class="card group relative">
+                    <a href="content_details.html">
+                        <div class="relative rounded-lg overflow-hidden shadow-xl">
+                            <img src="https://placehold.co/400x600/718096/ffffff?text=Future+Perfect" alt="Content" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                         <div class="mt-2">
+                            <h3 class="font-semibold text-md truncate">Future Perfect</h3>
+                            <p class="text-sm text-gray-400">Show</p>
+                        </div>
+                    </a>
+                     <button class="remove-icon absolute top-2 right-2 bg-black/60 p-1.5 rounded-full text-white hover:bg-red-500 transition-colors z-10">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+                </div>
+            
+            </div>
+    </main>
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewing History - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; -ms-overflow-style: none; scrollbar-width: none; }
+        body::-webkit-scrollbar { display: none; }
+        .main-content::-webkit-scrollbar { display: none; }
+        .main-content { -ms-overflow-style: none; scrollbar-width: none; height: 100vh; overflow-y: scroll; }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+<div class="flex h-screen">
+    <aside class="w-64 bg-gray-900 border-r border-gray-800 flex-shrink-0">
+        <div class="p-6">
+            <a href="index.html" class="text-2xl font-bold text-purple-400">Vibe<span class="text-white">Player</span></a>
+        </div>
+        <nav class="mt-6 px-4 space-y-2">
+            <a href="dashboard.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i>
+                Dashboard
+            </a>
+            <a href="profile.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="user" class="w-5 h-5 mr-3"></i>
+                Profile
+            </a>
+            <a href="subscription.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="gem" class="w-5 h-5 mr-3"></i>
+                Subscription
+            </a>
+            <a href="billing_history.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="history" class="w-5 h-5 mr-3"></i>
+                Billing History
+            </a>
+            <a href="watchlist.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="list-video" class="w-5 h-5 mr-3"></i>
+                Watchlist
+            </a>
+            <a href="viewing_history.html" class="flex items-center px-4 py-2.5 text-white bg-purple-600 rounded-lg font-semibold">
+                <i data-lucide="clock" class="w-5 h-5 mr-3"></i>
+                Viewing History
+            </a>
+            <a href="settings.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="settings" class="w-5 h-5 mr-3"></i>
+                Settings
+            </a>
+        </nav>
+        <div class="absolute bottom-0 w-64 p-4">
+            <a href="faq.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="help-circle" class="w-5 h-5 mr-3"></i>
+                Help Center
+            </a>
+            <a href="index.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors">
+                <i data-lucide="log-out" class="w-5 h-5 mr-3"></i>
+                Logout
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-1 bg-gray-900 main-content">
+        <header class="bg-gray-900 border-b border-gray-800 p-6 flex justify-between items-center sticky top-0 z-10">
+            <h1 class="text-3xl font-bold">Viewing History</h1>
+            <button class="text-sm font-semibold text-gray-400 hover:text-red-500 transition-colors flex items-center">
+                <i data-lucide="trash-2" class="w-4 h-4 mr-2"></i>
+                Clear All History
+            </button>
+        </header>
+
+        <div class="p-6">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div>
+                    <h2 class="text-lg font-semibold text-gray-400 mb-4">Today - October 9, 2025</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg">
+                            <a href="content_details.html" class="flex-shrink-0">
+                                <img src="https://placehold.co/200x112/1e293b/ffffff?text=Cosmic+Odyssey" alt="Content Thumbnail" class="w-32 rounded-md">
+                            </a>
+                            <div class="flex-grow ml-4">
+                                <a href="content_details.html" class="font-semibold hover:underline">Cosmic Odyssey</a>
+                                <p class="text-sm text-gray-400">Movie</p>
+                            </div>
+                            <button class="text-gray-500 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-lg font-semibold text-gray-400 mb-4">Yesterday - October 8, 2025</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-gray-800 p-3 rounded-lg">
+                             <a href="content_details.html" class="flex-shrink-0">
+                                <img src="https://placehold.co/200x112/2d3748/ffffff?text=The+Crown's+Game" alt="Content Thumbnail" class="w-32 rounded-md">
+                            </a>
+                            <div class="flex-grow ml-4">
+                                <a href="content_details.html" class="font-semibold hover:underline">The Crown's Game</a>
+                                <p class="text-sm text-gray-400">S1 E2: The Queen's Gambit</p>
+                            </div>
+                            <button class="text-gray-500 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+                        </div>
+                         <div class="flex items-center bg-gray-800 p-3 rounded-lg">
+                             <a href="content_details.html" class="flex-shrink-0">
+                                <img src="https://placehold.co/200x112/2d3748/ffffff?text=The+Crown's+Game" alt="Content Thumbnail" class="w-32 rounded-md">
+                            </a>
+                            <div class="flex-grow ml-4">
+                                <a href="content_details.html" class="font-semibold hover:underline">The Crown's Game</a>
+                                <p class="text-sm text-gray-400">S1 E1: A New Challenger</p>
+                            </div>
+                            <button class="text-gray-500 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+</body>
+</html>

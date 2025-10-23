@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Playing - Vibe Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        .playlist-container::-webkit-scrollbar {
+            width: 4px;
+        }
+        .playlist-container::-webkit-scrollbar-track {
+            background: #1f2937; /* gray-800 */
+        }
+        .playlist-container::-webkit-scrollbar-thumb {
+            background: #4b5563; /* gray-600 */
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <div class="flex flex-col lg:flex-row h-screen">
+        <div class="w-full lg:flex-grow bg-black relative">
+            <video class="w-full h-full object-contain" controls autoplay poster="https://placehold.co/1920x1080/111827/ffffff?text=Video+Loading...">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <a href="content_details.html" class="absolute top-5 left-5 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-colors z-10">
+                <i data-lucide="arrow-left" class="w-6 h-6"></i>
+                <span class="sr-only">Back to Details</span>
+            </a>
+        </div>
+
+        <div class="w-full lg:w-96 flex-shrink-0 bg-gray-900 p-6 flex flex-col">
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold">Cosmic Odyssey</h1>
+                <p class="text-purple-400 font-semibold mt-1">S1 E2: Into the Void</p>
+                <p class="text-gray-400 text-sm mt-3">The crew faces their first major challenge after entering the wormhole, testing their resolve and pushing their ship to its limits.</p>
+            </div>
+
+            <div class="flex-grow overflow-y-auto playlist-container pr-2">
+                 <h2 class="text-xl font-semibold mb-4">Up Next</h2>
+                 <div class="space-y-3">
+                    <a href="player.html" class="flex items-center p-2 bg-purple-900/50 border border-purple-500 rounded-lg">
+                        <img src="https://placehold.co/200x112/718096/ffffff?text=Ep+2" alt="Episode Thumbnail" class="w-24 h-14 object-cover rounded-md mr-3">
+                        <div>
+                            <h3 class="font-semibold text-sm">2. Into the Void</h3>
+                            <p class="text-xs text-gray-400">Now Playing</p>
+                        </div>
+                    </a>
+                     <a href="player.html" class="flex items-center p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
+                        <img src="https://placehold.co/200x112/a0aec0/ffffff?text=Ep+3" alt="Episode Thumbnail" class="w-24 h-14 object-cover rounded-md mr-3">
+                        <div>
+                            <h3 class="font-semibold text-sm">3. The Anomaly</h3>
+                            <p class="text-xs text-gray-400">45 min</p>
+                        </div>
+                    </a>
+                     <a href="player.html" class="flex items-center p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
+                        <img src="https://placehold.co/200x112/cbd5e0/ffffff?text=Ep+4" alt="Episode Thumbnail" class="w-24 h-14 object-cover rounded-md mr-3">
+                        <div>
+                            <h3 class="font-semibold text-sm">4. First Contact</h3>
+                            <p class="text-xs text-gray-400">48 min</p>
+                        </div>
+                    </a>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
