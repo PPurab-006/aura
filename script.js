@@ -1,86 +1,116 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Mobile Navigation Toggle ---
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    // --- 1. tsParticles Initialization ---
+    // This loads the particle animation in the hero section
+    (async () => {
+        await tsParticles.load({
+            id: "tsparticles",
+            options: {
+                // Use a transparent background so the CSS background-color shows
+                background: {
+                    color: {
+                        value: "transparent"
+                    }
+                },
+                fpsLimit: 60,
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push" // Click to add more particles
+                        },
+                        onHover: {
+                            enable: true,
+                            mode: "repulse" // Mouse over to move particles
+                        }
+                    },
+                    modes: {
+                        push: {
+                            quantity: 4
+                        },
+                        repulse: {
+                            distance: 150,
+                            duration: 0.4
+                        }
+                    }
+                },
+                particles: {
+                    color: {
+                        value: "#ffffff" // Particle color
+                    },
+                    links: {
+                        color: "#ffffff", // Connecting line color
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: "out",
+                        random: false,
+                        speed: 1, // Particle speed
+                        straight: false
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 800
+                        },
+                        value: 60 // Number of particles
+                    },
+                    opacity: {
+                        value: 0.3
+                    },
+                    shape: {
+                        type: "circle"
+                    },
+                    size: {
+                        value: { min: 1, max: 3 }
+                    }
+                },
+                detectRetina: true
+            }
         });
+    })();
 
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-link').forEach(n =>
-            n.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            })
-        );
-    }
+    // --- 2. Mobile Menu Toggle ---
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 
-    // --- 2. Animate on Scroll ---
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileNav.classList.remove('active');
+        });
+    });
+
+    // --- 3. IntersectionObserver for Scroll Animations ---
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once it's visible
             }
         });
     }, {
         threshold: 0.1 // Trigger when 10% of the element is visible
     });
 
-    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-    elementsToAnimate.forEach(el => observer.observe(el));
-
-    // --- 3. Testimonial Slider ---
-    const testimonials = document.querySelectorAll('.testimonial');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let index = 0;
-    let autoSlide;
-
-    function showTestimonial(i) {
-        testimonials.forEach((t, idx) => {
-            t.classList.remove('active');
-            if (idx === i) t.classList.add('active');
-        });
-    }
-
-    function nextTestimonial() {
-        index = (index + 1) % testimonials.length;
-        showTestimonial(index);
-    }
-
-    function prevTestimonial() {
-        index = (index - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(index);
-    }
-
-    if (nextBtn && prevBtn) {
-        nextBtn.addEventListener('click', () => {
-            nextTestimonial();
-            resetAutoSlide();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            prevTestimonial();
-            resetAutoSlide();
-        });
-    }
-
-    function startAutoSlide() {
-        autoSlide = setInterval(nextTestimonial, 5000);
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlide);
-        startAutoSlide();
-    }
-
-    if (testimonials.length > 0) {
-        showTestimonial(index); // Show first testimonial
-        startAutoSlide();       // Start auto sliding
-    }
+    // Observe each element
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
 
 });
