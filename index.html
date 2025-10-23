@@ -3,177 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraLabs | Data Analytics & Web Development</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
+    <title>AuraLabs - Turning Data into Decisions</title>
     <link rel="stylesheet" href="style.css">
-    
-    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="nav-logo">
-                    <img src="AuraLabs_logo-removebg-preview.png" alt="AuraLabs Logo">
-                </a>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact Us</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
+    <header id="header" class="glass">
+        <nav class="container">
+            <a href="#home" class="logo">AuraLabs</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-gradient">Contact Us</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
+
+    <div class="mobile-nav glass">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+    </div>
 
     <main>
         <section id="home" class="hero">
-            <div class="container">
-                <h1 class="hero-title animate-on-scroll">Turning Data into Decisions and Ideas into Reality.</h1>
-                <p class="hero-subtitle animate-on-scroll">Expert data analysis and full-stack development solutions designed to elevate your business.</p>
-                <a href="#contact" class="btn btn-primary animate-on-scroll">Get a Free Consultation</a>
+            <div id="tsparticles"></div>
+            <div class="hero-content animate-on-scroll">
+                <h1 class="gradient-text">Turning Data into Decisions</h1>
+                <p>We build futuristic web solutions and intelligent data models.</p>
+                <a href="#services" class="btn btn-gradient">Our Services</a>
             </div>
         </section>
 
-        <section id="services" class="services">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll">Our Expertise</h2>
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">📊</div>
-                        <h3 class="service-title">Data Analysis & Visualization</h3>
-                        <p class="service-description">We uncover hidden insights in your data. From interactive dashboards in Power BI/Tableau to predictive modeling, we help you make smarter, data-driven decisions.</p>
+        <section id="services" class="container">
+            <h2 class="section-title animate-on-scroll">What We Do</h2>
+            <div class="services-grid">
+                <div class="service-card glass animate-on-scroll">
+                    <h3>Data Analysis</h3>
+                    <p>Unlock insights from your data with advanced analytics.</p>
+                </div>
+                <div class="service-card glass animate-on-scroll">
+                    <h3>Web Dev</h3>
+                    <p>Modern, responsive, and blazing-fast websites.</p>
+                </div>
+                <div class="service-card glass animate-on-scroll">
+                    <h3>API Integration</h3>
+                    <p>Connecting your services for a seamless workflow.</p>
+                </div>
+                <div class="service-card glass animate-on-scroll">
+                    <h3>Graphic Design</h3>
+                    <p>Stunning visuals that define your brand identity.</p>
+                </div>
+                <div class="service-card glass animate-on-scroll">
+                    <h3>Machine Learning</h3>
+                    <p>Intelligent models that learn and adapt to your needs.</p>
+                </div>
+                <div class="service-card glass animate-on-scroll">
+                    <h3>Project Management</h3>
+                    <p>Delivering your project on time and on budget.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="container">
+            <h2 class="section-title animate-on-scroll">Our Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/600x400/1A1A2E/FFFFFF?text=Project+Alpha" alt="Project Alpha">
+                    <div class="portfolio-overlay">
+                        <h3>Project Alpha</h3>
+                        <p>AI-driven analytics dashboard.</p>
                     </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">💻</div>
-                        <h3 class="service-title">Full-Stack Web Development</h3>
-                        <p class="service-description">We build fast, responsive, and scalable web applications from the ground up. Specializing in modern technologies like React, Node.js, and Python for robust backends.</p>
+                </div>
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/600x400/1A1A2E/FFFFFF?text=Project+Beta" alt="Project Beta">
+                    <div class="portfolio-overlay">
+                        <h3>Project Beta</h3>
+                        <p>E-commerce platform development.</p>
                     </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">🚀</div>
-                        <h3 class="service-title">Scalable API Solutions</h3>
-                        <p class="service-description">Need to connect your applications? We design and build secure, efficient, and well-documented RESTful APIs to power your digital ecosystem.</p>
+                </div>
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/600x400/1A1A2E/FFFFFF?text=Project+Gamma" alt="Project Gamma">
+                    <div class="portfolio-overlay">
+                        <h3>Project Gamma</h3>
+                        <p>Mobile app design and branding.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-<section id="testimonials" class="testimonials">
-  <div class="container">
-    <h2 class="section-title">What Our Clients Say</h2>
-
-    <div class="testimonial-slider">
-      <div class="testimonial active">
-        <h4>Ravi Mehta</h4>
-        <p class="testimonial-role">Small Business Owner</p>
-        <p>"I never thought a website could actually bring in new clients, but AuraLabs proved me wrong. They built us something sleek, fast, and easy to use."</p>
-      </div>
-
-      <div class="testimonial">
-        <h4>Ananya Sharma</h4>
-        <p class="testimonial-role">Startup Founder</p>
-        <p>"We were juggling multiple apps, and nothing talked to each other. AuraLabs built an API that connected everything — now my mornings are stress-free!"</p>
-      </div>
-
-      <div class="testimonial">
-        <h4>Karan Verma</h4>
-        <p class="testimonial-role">Operations Manager</p>
-        <p>"I finally understood my company’s data. The dashboards they built were not just numbers, but real insights I could act on. Sales are already up."</p>
-      </div>
-
-      <div class="testimonial">
-        <h4>Neha Gupta</h4>
-        <p class="testimonial-role">Marketing Lead</p>
-        <p>"Every time we needed a tweak, the team was patient and quick. They treated our project like their own — which you don’t see often."</p>
-      </div>
-
-      <div class="testimonial">
-        <h4>Amit Patel</h4>
-        <p class="testimonial-role">Entrepreneur</p>
-        <p>"I was nervous about outsourcing development, but they nailed it. Honest, creative, and reliable — I couldn’t have asked for better partners."</p>
-      </div>
-    </div>
-
-    <!-- Manual Controls -->
-    <div class="slider-controls">
-      <button class="prev">❮</button>
-      <button class="next">❯</button>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-        <!--<section id="portfolio" class="portfolio">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll">Our Work</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item animate-on-scroll">
-                        <img src="https://via.placeholder.com/500x350/CCCCCC/FFFFFF?text=Project+One" alt="Portfolio Project 1">
-                        <div class="portfolio-overlay">
-                            <h3>E-commerce Sales Dashboard</h3>
-                            <p>An interactive dashboard analyzing sales trends.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item animate-on-scroll">
-                        <img src="https://via.placeholder.com/500x350/CCCCCC/FFFFFF?text=Project+Two" alt="Portfolio Project 2">
-                        <div class="portfolio-overlay">
-                            <h3>Custom Booking Website</h3>
-                            <p>Full-stack web app for a local service business.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item animate-on-scroll">
-                        <img src="https://via.placeholder.com/500x350/CCCCCC/FFFFFF?text=Project+Three" alt="Portfolio Project 3">
-                        <div class="portfolio-overlay">
-                            <h3>Company Internal API</h3>
-                            <p>REST API to connect internal software tools.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll">The Vision Behind the Firm</h2>
-                <p class="about-text animate-on-scroll">
-                    Founded at 19 with a passion for technology's potential, our mission is to deliver high-impact digital solutions. We combine rigorous analytical thinking with cutting-edge development practices to build products that are not only functional but also provide a genuine competitive advantage. We believe in building partnerships, not just projects.
-                </p>
-            </div>
+        <section id="about" class="container">
+            <h2 class="section-title animate-on-scroll">About AuraLabs</h2>
+            <p class="animate-on-scroll">
+                We are a passionate team of developers, designers, and data scientists dedicated to pushing the boundaries of technology. 
+                Our mission is to create digital experiences that are not only functional but also beautiful and intuitive. 
+                At AuraLabs, your vision becomes our code.
+            </p>
         </section>
-        
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll">Let's Build Something Great</h2>
-                <p class="contact-subtitle animate-on-scroll">Have a project in mind or just want to chat? Reach out!</p>
-                <a href="mailto:auralabs.co.in@gmail.com" class="btn btn-secondary animate-on-scroll">
-    auralabs.co.in@gmail.com
-</a>
 
-            </div>
+        <section id="contact" class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <p class="animate-on-scroll">
+                Have a project in mind? Let's talk about it.
+            </p>
+            <a href="mailto:hello@auralabs.dev" class="btn btn-outline animate-on-scroll">Send us an Email</a>
         </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 AuraLabs. All Rights Reserved.</p>
-        </div>
+    <footer class="container">
+        <p>&copy; 2025 AuraLabs. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
+
 
